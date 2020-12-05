@@ -2,12 +2,13 @@
   "name": "unity-debug",
   "displayName": "Debugger for Unity",
   "version": "3.0.2",
-  "publisher": "Unity",
-  "description": "Unity debugger extension",
+  "publisher": "deitry",
+  "description": "Unity debugger extension (Preview)",
   "license": "MIT",
   "engines": {
     "vscode": "^1.47.x"
   },
+  "preview": true,
   "extensionDependencies": [
     "ms-dotnettools.csharp"
   ],
@@ -36,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Unity-Technologies/vscode-unity-debug.git"
+    "url": "https://github.com/deitry/vscode-unity-debug.git"
   },
   "icon": "Images/dark/Unity.png",
   "main": "./out/attach.js",

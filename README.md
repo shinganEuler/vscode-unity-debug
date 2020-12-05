@@ -1,5 +1,9 @@
 ## Unity Debugger Extension for Visual Studio Code
 
+**NOTE:** This is a fork of an original Unity debugger extension and should be considered as Preview version of [Unity debugger](https://marketplace.visualstudio.com/items?itemName=Unity.unity-debug) extension. See [here](https://github.com/Unity-Technologies/vscode-unity-debug/issues/183) for the reasons of fork creation. Please refer to this [repo](https://github.com/deitry/vscode-unity-debug) for actual source code of extension.
+
+---
+
 This extension is not officially supported by Unity Technologies.
 
 Use Visual Studio Code to debug your Unity C# projects.
