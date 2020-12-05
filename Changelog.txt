@@ -6,6 +6,10 @@ Git: https://github.com/Unity-Technologies/vscode-unity-debug
 Changes
 -------
 
+3.0.3
+=====
+ - Activate extension only on specific events
+
 3.0.2
 =====
  - Update vscode dependencies
