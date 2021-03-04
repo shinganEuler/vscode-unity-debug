@@ -297,7 +297,7 @@ namespace UnityDebug
                     return;
                 }
 
-                var jObject = JObject.Parse(File.ReadAllText(pathToEditorInstanceJson.TrimStart('/')));
+                var jObject = JObject.Parse(File.ReadAllText(pathToEditorInstanceJson));
                 var processId = jObject["process_id"].ToObject<int>();
                 process = processes.First(p => p.Id == processId);
             }
