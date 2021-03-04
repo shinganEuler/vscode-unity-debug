@@ -1,7 +1,7 @@
 {
   "name": "unity-debug",
   "displayName": "Debugger for Unity",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "publisher": "deitry",
   "description": "Unity debugger extension (Preview)",
   "license": "MIT",
@@ -28,6 +28,7 @@
   "keywords": [
     "unity",
     "unity3d",
+    "csharp",
     "debugger",
     "debug"
   ],

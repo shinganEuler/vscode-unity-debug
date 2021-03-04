@@ -6,6 +6,10 @@ Git: https://github.com/Unity-Technologies/vscode-unity-debug
 Changes
 -------
 
+3.0.5
+=====
+ - Attempt to fix path issue on Linux (https://github.com/Unity-Technologies/vscode-unity-debug/issues/195)
+
 3.0.4
 =====
  - Minor changes in exception handling to track down https://github.com/Unity-Technologies/vscode-unity-debug/issues/183
