@@ -6,6 +6,7 @@ bin
 .idea
 .vscode
 .vs
+dist/
 node_modules
 oldExternal
 out

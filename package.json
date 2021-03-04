@@ -1,7 +1,7 @@
 {
   "name": "unity-debug",
   "displayName": "Debugger for Unity",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "publisher": "deitry",
   "description": "Unity debugger extension (Preview)",
   "license": "MIT",
@@ -14,11 +14,14 @@
   ],
   "devDependencies": {
     "@types/vscode": "^1.47.0",
-    "vscode-debugprotocol": "^1.42.0"
+    "ts-loader": "5.3.3",
+    "vscode-debugprotocol": "^1.42.0",
+    "webpack": "^5.24.3",
+    "webpack-cli": "^4.5.0"
   },
   "dependencies": {
     "@types/node": "^14.14.7",
-    "make": "^0.8.1",
+    "make": "^0.0.0",
     "npm": "^7.0.10",
     "vscode-nls": "^5.0.0"
   },
@@ -43,8 +46,10 @@
   "icon": "Images/dark/Unity.png",
   "main": "./out/attach.js",
   "scripts": {
+    "vscode:prepublish": "make build && webpack --mode production",
+    "webpack-dev": "webpack --mode development --watch",
+    "webpack": "webpack --mode development",
     "prepare": "make build",
-    "vscode:prepublish": "make build",
     "compile": "make build",
     "watch": "tsc -w -p ./src/typescript"
   },
