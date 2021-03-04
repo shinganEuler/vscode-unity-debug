@@ -9,6 +9,7 @@ Changes
 3.0.4
 =====
  - Minor changes in exception handling to track down https://github.com/Unity-Technologies/vscode-unity-debug/issues/183
+ - More graceful debugger stop by supporting `terminate` request
 
 3.0.3
 =====

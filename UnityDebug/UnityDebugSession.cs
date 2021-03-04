@@ -242,6 +242,8 @@ namespace UnityDebug
 
                 supportsSetVariable = true,
 
+                supportsTerminateRequest = true,
+
                 // This debug adapter does not support exception breakpoint filters
                 exceptionBreakpointFilters = new ExceptionBreakpointsFilter[0]
             });

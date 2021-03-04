@@ -103,6 +103,7 @@ function startSession(context: ExtensionContext, config: any) {
     let execCommand = "";
     if (process.platform !== 'win32')
         execCommand = "mono ";
+
     exec(execCommand + context.extensionPath + "/bin/UnityDebug.exe list", async function (error, stdout, stderr) {
         const processes = [];
         const lines = stdout.split("\n");
@@ -111,6 +112,7 @@ function startSession(context: ExtensionContext, config: any) {
                 processes.push(lines[i]);
             }
         }
+        
         if (processes.length == 0) {
             window.showErrorMessage("No Unity Process Found.");
         } else {
@@ -125,7 +127,6 @@ function startSession(context: ExtensionContext, config: any) {
                 "__exceptionOptions": exceptions.convertToExceptionOptionsDefault()
             }
             let response = await debug.startDebugging(undefined, config);
-                    console.log("8");
 
             console.log("debug ended: " + response);
         }
