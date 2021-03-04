@@ -1,12 +1,12 @@
 [submodule "MonoDebug"]
 	path = MonoDebug
-	url = https://github.com/Unity-Technologies/vscode-mono-debug.git
+	url = https://github.com/deitry/vscode-mono-debug.git
 [submodule "MonoDevelop.Debugger.Soft.Unity"]
 	path = MonoDevelop.Debugger.Soft.Unity
 	url = https://github.com/Unity-Technologies/MonoDevelop.Debugger.Soft.Unity
 [submodule "debugger-libs"]
 	path = debugger-libs
-	url = https://github.com/Unity-Technologies/debugger-libs.git
+	url = https://github.com/deitry/debugger-libs.git
 [submodule "External/cecil"]
 	path = External/cecil
 	url = https://github.com/jbevain/cecil.git
