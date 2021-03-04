@@ -6,6 +6,10 @@ Git: https://github.com/Unity-Technologies/vscode-unity-debug
 Changes
 -------
 
+3.0.7
+=====
+ - Fix Changelog not appearing in the extension
+
 3.0.6
 =====
  - Attempt to fix "Could not find target name ..." for specific cases (https://github.com/Unity-Technologies/vscode-unity-debug/issues/193)

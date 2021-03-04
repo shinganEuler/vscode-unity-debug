@@ -4,7 +4,7 @@
 **/.mdb
 !package.json
 !bin/**
-!Changelog.txt
+!CHANGELOG.md
 !LICENSE.txt
 !README.md
 !Images/**
