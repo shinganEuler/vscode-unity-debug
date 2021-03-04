@@ -24,6 +24,11 @@ namespace UnityDebug
             { "switch player", "SwitchPlayer" },
         };
 
+        public static string ProcessNameForPicker(UnityProcessInfo info)
+        {
+            return $"{info.Name} ({info.Id}) {info.ProjectName}";
+        }
+
         public static IEnumerable<UnityProcessInfo> GetAttachableProcesses(string targetName)
         {
             var match = Regex.Match(targetName, "\\(([0-9]+)\\)");

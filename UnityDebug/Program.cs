@@ -93,7 +93,7 @@ namespace UnityDebug
 		{
 			var processes = UnityProcessDiscovery.GetAttachableProcesses();
 
-			return string.Join("\n", processes.Select(x => $"{x.Name} ({x.Id})" + $" {x.ProjectName}"));
+			return string.Join("\n", processes.Select(UnityAttach.ProcessNameForPicker));
 		}
 	}
 }

@@ -269,6 +269,23 @@ namespace UnityDebug
 
             var processes = UnityAttach.GetAttachableProcesses(name).ToArray();
 
+            // try to find process that named exactly as passed name
+            if (processes.Length == 0)
+            {
+                processes = UnityProcessDiscovery.GetAttachableProcesses()
+                    .Where(x => UnityAttach.ProcessNameForPicker(x) == name)
+                    .ToArray();
+            }
+
+            // try to find process which name contains passed process name
+            // - in case that we get only part of name here due to some truncation
+            if (processes.Length == 0)
+            {
+                processes = UnityProcessDiscovery.GetAttachableProcesses()
+                    .Where(x => UnityAttach.ProcessNameForPicker(x).Contains(name))
+                    .ToArray();
+            }
+
             if (processes.Length == 0)
             {
                 Log.Write($"Could not find target name '{name}'.");
