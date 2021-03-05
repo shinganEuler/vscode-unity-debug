@@ -40,37 +40,38 @@ export function deactivate() {
 
 class UnityDebugConfigurationProvider implements DebugConfigurationProvider {
 	provideDebugConfigurations(folder: WorkspaceFolder | undefined, token?: CancellationToken): ProviderResult<DebugConfiguration[]> {
-		const config = [
-			{
-				name: "Unity Editor",
-				type: "unity",
-				path: folder.uri.path + "/Library/EditorInstance.json",
-				request: "launch"
-			},
-			{
-				name: "Windows Player",
-				type: "unity",
-				request: "launch"
-			},
-			{
-				name: "OSX Player",
-				type: "unity",
-				request: "launch"
-			},
-			{
-				name: "Linux Player",
-				type: "unity",
-				request: "launch"
-			},
-			{
-				name: "iOS Player",
-				type: "unity",
-				request: "launch"
-			},
-			{
-				name: "Android Player",
-				type: "unity",
-				request: "launch"
+
+        const config = [
+            {
+                name: "Unity Editor",
+                type: "unity",
+                path: folder.uri.path + "/Library/EditorInstance.json",
+                request: "launch"
+            },
+            {
+                name: "Windows Player",
+                type: "unity",
+                request: "launch"
+            },
+            {
+                name: "OSX Player",
+                type: "unity",
+                request: "launch"
+            },
+            {
+                name: "Linux Player",
+                type: "unity",
+                request: "launch"
+            },
+            {
+                name: "iOS Player",
+                type: "unity",
+                request: "launch"
+            },
+            {
+                name: "Android Player",
+                type: "unity",
+                request: "launch"
             },
             {
                 name: "Xbox One Player",
@@ -87,11 +88,16 @@ class UnityDebugConfigurationProvider implements DebugConfigurationProvider {
                 type: "unity",
                 request: "launch"
             }
-		];
-		return config;
+        ];
+        return config;
 	}
 
 	resolveDebugConfiguration(folder: WorkspaceFolder | undefined, debugConfiguration: DebugConfiguration, token?: CancellationToken): ProviderResult<DebugConfiguration> {
+        if (!debugConfiguration.type) {
+            // If the config doesn't look functional force VSCode to open a configuration file https://github.com/Microsoft/vscode/issues/54213
+            return null;
+        }
+
         if (debugConfiguration && !debugConfiguration.__exceptionOptions) {
             debugConfiguration.__exceptionOptions = exceptions.convertToExceptionOptionsDefault();
         }
