@@ -6,6 +6,10 @@ Git: https://github.com/Unity-Technologies/vscode-unity-debug
 Changes
 -------
 
+3.0.10
+=====
+ - Fix launch.json creation when there is no configuration (https://github.com/Unity-Technologies/vscode-unity-debug/issues/194)
+
 3.0.9
 =====
  - Fix extension entry point after moving to webpack
