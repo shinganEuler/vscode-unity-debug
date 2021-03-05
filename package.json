@@ -44,7 +44,7 @@
     "url": "https://github.com/deitry/vscode-unity-debug.git"
   },
   "icon": "Images/dark/Unity.png",
-  "main": "./out/attach.js",
+  "main": "./dist/extension",
   "scripts": {
     "vscode:prepublish": "make build && webpack --mode production",
     "webpack-dev": "webpack --mode development --watch",
