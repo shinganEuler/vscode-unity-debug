@@ -5,6 +5,8 @@ bin
 *.DotSettings.user
 .idea
 .vscode
+!.vscode/launch.json
+!.vscode/tasks.json
 .vs
 dist/
 node_modules

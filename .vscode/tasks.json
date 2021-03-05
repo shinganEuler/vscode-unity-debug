@@ -1,0 +1,85 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+		{
+			"label": "buildDev",
+			"command": "npm",
+			"type": "shell",
+			"args": [
+				"run",
+				"compileDev"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+        {
+            "type": "npm",
+            "script": "watch",
+            "problemMatcher": "$tsc-watch",
+            "isBackground": true,
+            "presentation": {
+                "reveal": "never"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Build UnityDebug",
+            "command": "MSBuild.exe",
+            "args": [
+                // "VSCode-UnityDebug.sln",
+                "UnityDebug/UnityDebug.csproj",
+                "/target:Restore,Build",
+                "/property:Configuration=Release",
+                // "/property:Platform=AnyCPU"
+            ],
+            "options": {
+                "cwd": "./"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "Build Debug UnityDebug",
+            "command": "MSBuild.exe",
+            "args": [
+                // "VSCode-UnityDebug.sln",
+                "UnityDebug/UnityDebug.csproj",
+                "/target:Restore,Build",
+                "/property:Configuration=Debug",
+                // "/property:Platform=AnyCPU"
+            ],
+            "options": {
+                "cwd": "./"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        },
+        {
+            "label": "Build all",
+            "dependsOn": [
+                "Build UnityDebug",
+                "npm: compile"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Build all Debug",
+            "dependsOn": [
+                "Build Debug UnityDebug",
+                "npm: compile"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

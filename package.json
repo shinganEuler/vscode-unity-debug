@@ -51,6 +51,7 @@
     "webpack": "webpack --mode development",
     "prepare": "make build",
     "compile": "make build",
+    "compileDev": "make build && tsc -p ./typescript && webpack --mode development",
     "watch": "tsc -w -p ./src/typescript"
   },
   "activationEvents": [

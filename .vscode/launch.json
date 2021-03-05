@@ -10,7 +10,11 @@
 				"--extensionDevelopmentPath=${workspaceRoot}"
 			],
 			"stopOnEntry": false,
-			"sourceMaps": true
+            "sourceMaps": true,
+            "outFiles": [
+                "${workspaceRoot}/dist/*.js"
+            ],
+            "preLaunchTask": "buildDev"
 		},
 		{
 			"name": "Attach to Debugger",
@@ -19,6 +23,7 @@
 			"processName": "UnityDebug.exe",
 			"justMyCode": false,
 			"requireExactSource": false,
+			"preLaunchTask": "Build all"
 		}
 	]
 }
