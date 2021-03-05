@@ -6,6 +6,10 @@ Git: https://github.com/Unity-Technologies/vscode-unity-debug
 Changes
 -------
 
+3.0.9
+=====
+ - Fix extension entry point after moving to webpack
+
 3.0.8
 =====
  - Use webpack to bundle extension
