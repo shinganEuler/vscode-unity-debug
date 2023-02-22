@@ -2,8 +2,8 @@
   "name": "unity-debug",
   "displayName": "Debugger for Unity",
   "version": "3.0.11",
-  "publisher": "deitry",
-  "description": "Unity debugger extension (Preview)",
+  "publisher": "shinganEuler",
+  "description": "Unity debugger extension",
   "license": "MIT",
   "engines": {
     "vscode": "^1.47.x"
