@@ -2,10 +2,16 @@
 
 STATEMENT
 
-Sadly, I don't have enough time to work on this extension and most of the time I don't even have a need to debug Unity code. 
-Even original developers and maintainers are giving up on this extension, e.g. see https://github.com/Unity-Technologies/vscode-unity-debug/issues/207#issuecomment-1131464573
+Forked from deitry/vscode-unity-debug.
 
-So I doubt there will be updates in the future. :(
+Just reactivate this plugin in vscode, not guaranteed to work normally. PR is very welcome, I will merge it when I have time.
+
+~~STATEMENT~~
+
+~~Sadly, I don't have enough time to work on this extension and most of the time I don't even have a need to debug Unity code. 
+Even original developers and maintainers are giving up on this extension, e.g. see https://github.com/Unity-Technologies/vscode-unity-debug/issues/207#issuecomment-1131464573~~
+
+~~So I doubt there will be updates in the future. :(~~
 
 ---
 
