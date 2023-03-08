@@ -1,7 +1,7 @@
 {
   "name": "vscode-unity-debug",
   "displayName": "VSCode Unity Debugger",
-  "version": "3.0.11",
+  "version": "3.0.13",
   "publisher": "shinganEuler",
   "description": "Unity debugger extension",
   "license": "MIT",
@@ -16,8 +16,8 @@
     "@types/vscode": "^1.47.0",
     "ts-loader": "5.3.3",
     "vscode-debugprotocol": "^1.42.0",
-    "webpack": "^5.24.3",
-    "webpack-cli": "^4.5.0"
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   },
   "dependencies": {
     "@types/node": "^14.14.7",
@@ -41,7 +41,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/deitry/vscode-unity-debug.git"
+    "url": "https://github.com/shinganEuler/vscode-unity-debug.git"
   },
   "icon": "Images/dark/Unity.png",
   "main": "./dist/extension",
